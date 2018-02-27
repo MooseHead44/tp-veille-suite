@@ -1,0 +1,153 @@
+@grisFonce : #A9A9A9;
+@bleu : #0230BA;
+@noir : #000000;
+@vert : #00FF00;
+@gris : #E8E8E8;
+
+
+body {
+	background-color: @bleu;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+			cursor: default;
+
+	header {
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		align-items: flex-end;
+		width: 90%;
+		padding: 0 55px;
+		border-bottom: 5px solid @grisFonce;
+
+		h1 {
+			margin-bottom: 0;
+		}
+
+		nav {
+			ul {
+				display: flex;
+				flex-flow: row;
+				border: none;
+				padding: 0;
+				margin: 0;
+
+				li {
+					margin: 0 20px;
+					list-style-type: none;
+
+					&:hover a {
+						color: @vert;
+					}
+				}
+			}
+		}
+	}
+
+	h1 {
+		font-family: Open Sans;
+		font-weight: bold;
+		font-size: 45px;
+		color: @noir;
+	}
+
+	a {
+		text-decoration: none;
+		color: @grisFonce;
+		font-family: Open Sans;
+		font-weight: bold;
+		font-size: 22px;
+		transition: all 0.2s;
+	}
+
+	p {
+		color: @grisFonce;
+		font-family: Open Sans;
+	}
+
+	form {
+		border: 3px solid @grisFonce;
+		font-family: Open Sans;
+		font-size: 20px;
+		padding: 50px;
+		color: @grisFonce;
+
+		input[type='text'] {
+			font-family: Roboto;
+			font-size: 20px;
+			background-color: @gris;
+			color: @bleu;
+			margin-bottom: 20px;
+			border: 2px solid @vert;
+		}
+
+		input[type='submit'] {
+			display: block;
+			background-color: @bleu;
+			border: 2px solid @grisFonce;
+			padding: 10px;
+			font-family: Open Sans;
+			font-size: 12px;
+			margin: 5px auto;
+			color: @vert;
+			transition: all 0.3s;
+
+			&:hover {
+				color: @noir;
+				padding: 15px;
+				margin: 0 auto;
+			}
+		}
+
+		input:focus {
+			border: 2px solid @noir;
+			outline: none;
+		}
+
+		&#formModif {
+			border: none;
+			padding: 0;
+		}
+	}
+
+	ul {
+		padding: 30px 60px;
+		border: 3px solid @noir;
+
+		li {
+			color: @vert;
+			font-family: Roboto;
+			font-size: 20px;
+		}
+	}
+}
+
+.tableau {
+	border-collapse : collapse;
+	tr{
+		td:nth-child(1) {
+			cursor: default;
+		}
+	}
+
+	td, th {
+		border: 3px solid @grisFonce;
+		padding: 10px;
+		font-family: Roboto;
+		font-size: 20px;
+		text-align: center;
+		color: @vert;
+		cursor: pointer;
+	}
+
+	td {
+		a {
+			color: @noir;
+		}
+	}
+
+	th {
+		font-weight: bold;
+	}
+}
